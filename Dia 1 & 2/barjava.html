@@ -17,40 +17,34 @@
     <section>
 
         <h2>Cardápio</h2>
-     
+     <form>
         <h3>Bebidas</h3>
-        <ul>
-            <li>Coffe
-                <ul>
-                    <li>Ingredientes: Java moído e torrado</li>
-                </ul>
-            </li>
-            <li>Capuccino
-                <ul>
-                    <li>Ingredientes: Café, leite, canela</li>
-                </ul>
-            </li>
-            <li>Suco do Hulk
-                <ul>
-                    <li>Ingredientes: Laranja, stress, limao</li>
-                </ul>
-            </li>
-            <li>Cariani c/ hortelã
-                <ul>
-                    <li>Ingredientes: Pó branco, Creatina, hortelã, limão, água com gás</li>
-                </ul>
-            </li>
-            <li>Piña Colada ou pinga
-                <ul>
-                    <li>Ingredientes: Rum, leite de coco, abacaxi ou barrerao</li>
-                </ul>
-            </li>
-            <li>Caipirinha
-                <ul>
-                    <li>Ingredientes: Barrero, limão, açúcar, gelo</li>
-                </ul>
-            </li>
+        <ul style="list-style-type: square;">
+            <li><b>Coffe</b>              
+                <dd><i>Cafe moído, água</i></dd>
+            </li></br>
+
+            <li><b>Capuccino</b>
+                <dd><i>Café solúvel, leite, canela</i></dd>
+            </li></br>
+
+            <li><b>Suco do Hulk(Verde)</b>
+                    <dd><i>Laranja, stress, limao, gengibre, menta</i></dd>           
+            </li></br>
+            
+            <li><b>Cariani c/ hortelã</b>
+                    <dd><i>Pó de guaraná, Creatina, hortelã, limão, água com gás</i></dd>      
+            </li></br>
+
+            <li><b>Piña Colada c/ pinga</b>                
+                    <dd><i>Rum, leite de coco, abacaxi ou barrerao</i></dd>                
+            </li></br>
+
+            <li><b>Caipirinha</b>                
+                    <dd><i>Barrero, limão, açúcar, gelo</i></dd>
+            </li></br>
         </ul>
+        </form>
     </section>
     <section>
         <h2>Horário de Funcionamento</h2>
@@ -91,63 +85,89 @@
         </table>
     </section>
 
-    <table border="1px" cellspacing="0" cellpadding="5px">
-    </table>
     </br>   
-</br>
-</br>
+    </br>
+    </br>
+    
 </body>
+
 <footer>
 
-    <form>
-        <h2>TRABALHE CONOSCO</h2>
+    <h2>TRABALHE CONOSCO</h2>
 
-        <label>Nome Completo:
-        <input type="text" placeholder="Digite seu nome"></br> 
-    </label>
+<form>
+    <table>
+        <thead>
+            <tr>
+                <td><label for="nome">Nome Completo:</label></td>
+                <td>                    
+                    <input type="text" id="nome" placeholder="Digite seu nome" style="width: 97%;">
+                </td>
+                
+                <td>
+                    <label for="idade"> Idade:</label>
+                    <input type="number" id="idade" placeholder="Informe sua idade">
+                </td>
+            </tr>
+            <tr>
+                <td> <label for="telefone">Telefone:</label></td>
+                <td>   
+                    <input type="tel" id="telefone" placeholder="(11)-00000-0000" style="width: 97%">
+                </td>
+                <td>
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" placeholder="abc@email.com">
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
 
-        <label>Telefone:
-        <input type="tel" placeholder="(11)-00000-0000"></br>
-    </label>
+                <td>Sexo:</td>
+                <td>
+                    
+                    <input type="radio" name="sexo" value="Feminino" id="feminino">
+                    <label for="feminino">Feminino</label>
+            
+                    <input type="radio" name="sexo" value="Masculino" id="masculino">
+                    <label for="masculino">Masculino</label>
+            
+                    <input type="radio" name="sexo" value="Outro" id="outro">
+                    <label for="outro">Outro</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Selecione a profissão:</td>
+                <td>                
+                    <select name="profissao">
+                        <option value="RH">Analista de RH</option>
+                        <option value="TI">Analista de Infraestrutura</option>
+                        <option value="DEV">Desenvolvedor Back-End Pl</option>
+                        <option value="COZINHA">Barman</option>
+                    </select>
+                </td>
+                <td>
+                    <textarea id="experiencia" name="experiencia" placeholder="Fale um pouco sobre sua experiência" style="width: 100%;"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Envie seu CV:</label></td>
+                <td colspan="2">
+                    <input type="file" >
+                </td>
+            </tr>
+            <tr>
 
-        <label>E-Mail:
-        <input type="email" placeholder="abc@email.com"></br>
-    </label>
-
-        <label>Sexo:
-        <input type="radio" name="sexo" value="Feminino">
-        <span>Feminino</span>
-        </label>
-
-        <label>
-        <input type="radio" name="sexo" value="Masculino">
-        <span>Masculino</span>
-        </label>
-
-        <label>
-        <input type="radio" name="sexo" value="Outro">
-        <span>Outro</span>
-        </label></br>
-        </br>
+                <td colspan="2">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Resetar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
 
 
-        <label> Selecione a profissao</br>
-        <select name="profissao">
-            <option value="RH">Analista de RH</option>
-            <option value="TI">Analista de Infraestrutura</option>
-            <option value="DEV">Desenvolvedor Back-End Pleno</option>
-            <option value="COZINHA">Barman</option>
-        </select></br>
-        <textarea name="textoooo" placeholder="Fale um pouco sobre sua experiencia"></textarea>
-        </label></br>
-        
-        <p>Selecione o CV</p>
-        <input type="file" placeholder="CV"></br>
-        <button type="submit">Enviar</button>
-        <button type="reset">Resetar</button>
-
-        
-    </form>
     THANKS!
 </footer>
 </html>
