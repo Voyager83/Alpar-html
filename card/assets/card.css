@@ -10,14 +10,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background:#24003b
+    background:#32044e
 }
 
 .card {
     width: 100%;
     max-width: 400px;
     text-align: center;
-    background: rgba(70, 44, 129, 0.5);
+    background: rgba(83, 53, 155, 0.5);
     padding: 20px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
@@ -25,12 +25,12 @@ body {
 }
 
 .card img {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     margin-bottom: 20px;
     object-fit: cover;
-    border: 3px solid white;
+    border: 2px solid rgb(49, 25, 65);
   }
 
 .card h1 {
@@ -39,23 +39,26 @@ body {
   }
   
   .card p {
-    font-size: 16px;
+    font-size: 18px;
     margin: 10px 0 20px;
-    color: #e0e0e0;
+    color: #ffffff;
+  }
+
+  .card span{
+    font-size: 15px;
+    margin: 10px 0 20px;
+    color: #ffffff;
   }
   
   .links a {
     display: block;
     text-decoration: none;
-    padding: 10px;
-    margin: 10px 0;
-    background: #ffffff;
-    color: #551010;
+    padding: 15px;
+    margin: 8px 0;
+    background: #e4c9fd;
+    color: #05012c;
     border-radius: 10px;
     transition: 0.3s ease;
   }
   
-  .links a:hover {
-    background: #3d17c4;
-    color: white;
-  }
+ 
