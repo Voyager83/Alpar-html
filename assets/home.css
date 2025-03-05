@@ -53,9 +53,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    padding: 5px 10px;
     color: #b9b9b9;
-    background: #0056a7;
     display: flex;
     text-align: center;
 }
