@@ -9,15 +9,53 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100hv;
+    height: 100vh;
+    background:#24003b
 }
 
 .card {
     width: 100%;
     max-width: 400px;
     text-align: center;
-    background: rgba(183, 0, 255, 0.5);
+    background: rgba(70, 44, 129, 0.5);
     padding: 20px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
+
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: 3px solid white;
+  }
+
+.card h1 {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .card p {
+    font-size: 16px;
+    margin: 10px 0 20px;
+    color: #e0e0e0;
+  }
+  
+  .links a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    background: #ffffff;
+    color: #551010;
+    border-radius: 10px;
+    transition: 0.3s ease;
+  }
+  
+  .links a:hover {
+    background: #3d17c4;
+    color: white;
+  }
