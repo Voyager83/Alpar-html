@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.banner {
+    background-image: url('bf3-flight.jpg');
+    background-size: contain;
+    height: 400px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 48px;
+    text-shadow: 2px 4px 16px rgba(5, 5, 24, 0.8);
+
+}
