@@ -36,7 +36,7 @@ nav ul li a {
 
 .banner {
     background-image: url('bf3-flight.jpg');
-    background-size: contain;
+    background-size: cover;
     height: 400px;
     display: flex;
     align-items:center;
@@ -52,15 +52,22 @@ nav ul li a {
 }
 
 section {
-    display: grid;
+    display:grid;
     grid-template-columns: 2fr 2fr 2fr;
-    /* gap: 16px; */
+    box-sizing: border-box;
 }
 .grid {
-    
-    background-color: blue;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr;
+    /* background-color: blue; */
+    padding: 100hv;
     height: 350px;
     margin: 8px;
     width: 400px;
+    gap: 8px;
+}
 
+.grid * {
+    background-color: blue;
 }
