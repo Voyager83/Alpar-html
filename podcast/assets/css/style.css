@@ -220,11 +220,15 @@ main section div.ep div.descricoes span.resumo {
     font-size: 14px;
     color: #B3B3B3;
     padding-bottom: 4px;
+    font-family: "Shippori Antique B1", sans-serif;
+    font-weight: 500;
 }
 main section div.ep div.descricoes span.data {
-    font-size: 12px;
+    font-size: 14px;
     padding: 16px 0;
     display: flex;
+    font-family: "Shippori Antique B1", sans-serif;
+    font-weight: 600;
 }
 
 /* ICONE DO YOUTUBE */
