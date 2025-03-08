@@ -32,9 +32,11 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: rgb(36,36,36);
-    background: linear-gradient(3deg, rgba(36,36,36,1) 0%, rgba(105,105,105,1) 45%, rgba(189,190,191,1) 75%);
+    background: 
+         linear-gradient(180deg, rgba(177, 201, 211, 0.384) 0%, rgba(40, 40, 40, 0.534) 44%, rgb(24, 24, 24) 70%, rgba(0, 0, 0, 0.753) 93%), 
+         url('../img/sp.jpeg') center/cover;
 }
+
 
 header img {
     height:calc(100% - 48px);
@@ -69,10 +71,10 @@ main {
     grid-area: main;  
 }
 main div.nav-eps {
-    height: 20vh;
-    background: rgb(62,62,62);
-    background: linear-gradient(180deg, rgba(62,62,62,1) 0%, rgba(55,55,55,1) 14%, rgba(40,40,40,1) 50%, rgba(18,18,18,1) 100%);
+    height: calc(100% - 55vh);
     padding: 24px;
+    background: rgb(50,50,50);
+    background: linear-gradient(180deg, rgba(50,50,50,1) 0%, rgba(40,40,40,1) 44%, rgba(24,24,24,1) 70%, rgba(18,18,18,1) 93%);
 }
 main div.nav-eps .join-mais {
     display: flex;
@@ -86,7 +88,18 @@ main div.nav-eps h3 {
     font-size: 24px;
     font-weight: 700;
     font-family: "Shippori Antique B1", sans-serif;
+    padding-bottom:24px ;
 }
+
+main div.nav-eps span {
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #B3B3B3;
+    padding-bottom: 24px;
+}
+
+
 
 main div.nav-eps div.join-mais button {
     border-radius: 999px;
@@ -101,7 +114,7 @@ main div.nav-eps div.join-mais button {
     margin-right: 2px;
     -webkit-box-shadow: -2px 10px 20px 0px rgba(0,0,0,0.63);
     -moz-box-shadow: -2px 10px 20px 0px rgba(0,0,0,0.63);
-    box-shadow: -2px 10px 20px 0px rgba(0,0,0,0.63);
+    box-shadow: -2px 10px 20px 0px rgba(0,0,0,0.63);  
     
 }
 main div.nav-eps div.join-mais button:hover {
@@ -115,19 +128,60 @@ main div.nav-eps div.join-mais button:hover {
   }
 main div.nav-eps div.join-mais button:active {
     border: 1px solid rgb(105, 105, 105) ;
-    background-color: rgba(116, 100, 10, 0.315);
-    color: rgba(184, 184, 184, 0.815);
+    background-color: rgba(133, 113, 1, 0.233);
+    color: rgb(248, 232, 186);
     margin-right: 2px;
     -webkit-box-shadow: -6px 8px 9px 1px rgba(0,0,0,0.8);
     -moz-box-shadow: -6px 8px 9px 1px rgba(0,0,0,0.8);
     box-shadow: -6px 8px 9px 1px rgba(0,0,0,0.8);
     
 }
-
+main div.nav-eps div.botoes-tag {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin: 32px 0px;
+}
+main div.nav-eps div.botoes-tag button{
+    border-radius: 20px;
+    border: 0;
+    color: rgb(255, 255, 255);
+    padding: 8px 14px;
+    background-color: rgba(110, 110, 110, 0.438);
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    -webkit-box-shadow: -2px 10px 20px 0px rgba(0,0,0,0.63);
+    -moz-box-shadow: -2px 10px 20px 0px rgba(0,0,0,0.63);
+    box-shadow: -2px 10px 20px 0px rgba(0,0,0,0.63);
+    font-family: "Shippori Antique B1", sans-serif;
+}
+main div.nav-eps div.botoes-tag button:hover {
+    border-radius: 20px;
+    border: 0;
+    color: rgb(255, 255, 255);
+    padding: 8px 14px;
+    background-color: rgba(143, 143, 143, 0.438);
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+main div.nav-eps div.botoes-tag button:active {
+    border-radius: 20px;
+    border: 0;
+    color: rgb(255, 255, 255);
+    padding: 8px 14px;
+    background-color: rgba(167, 167, 167, 0.589);
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.1s;
+}
 section.episodios {
     padding: 12px;
     background: rgba(18, 18, 18, 1);
-
+    height: calc(100% - 25vh);
 }
 section img{
     width: 140px;
