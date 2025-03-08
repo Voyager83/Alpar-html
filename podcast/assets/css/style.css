@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
+
 
 * {
     margin: 0;
@@ -13,14 +17,14 @@ body {
     grid-template-rows: 80px 250px 1fr 80px;
     height: 100vh;
     font-family: 'Quicksand', sans-serif;
+    padding: 6px;
+    background-color: black;
+    
 }
-
-
 
 nav {
     grid-area: nav;
-    background-color: aqua;
-
+    background-color: rgb(44, 87, 87);
 }
 
 header {
@@ -33,38 +37,109 @@ header {
 }
 
 header img {
-    width: 20%;
+    height:calc(100% - 48px);
     max-width: 250px;
-    padding: 0 24px;
+    margin: 24px;
+    /* padding: 0 24px; */
+    -webkit-box-shadow: -7px 26px 18px 5px rgba(0,0,0,0.67);
+    -moz-box-shadow: -7px 26px 18px 5px rgba(0,0,0,0.67);
+    box-shadow: -7px 26px 18px 5px rgba(0,0,0,0.67);
+
+}
+header div.title span {
+    font-size: 24px;
+    font-family: "Shippori Antique B1", sans-serif;
+}
+header div.title h1 {
+    font-family: 'Bungee Shade', sans-serif;
+    font-size: 96px;    
+}
+header div.title p {
+    font-size: 14px;
+    font-family: 'poppins';
 }
 
-header div.title {
-    font-size: 20px
-    
-}
+
+
+/* =======================================================================
+===================== SEÇÃO DA LISTA DOS EPS =============================
+========================================================================== */
 
 main {
     grid-area: main;  
-    background: rgb(69,68,68);
-    background: linear-gradient(180deg, rgba(69,68,68,1) 0%, rgba(40,40,40,1) 7%, rgb(12, 12, 12) 27%);
+}
+main div.nav-eps {
+    height: 20vh;
+    background: rgb(62,62,62);
+    background: linear-gradient(180deg, rgba(62,62,62,1) 0%, rgba(55,55,55,1) 14%, rgba(40,40,40,1) 50%, rgba(18,18,18,1) 100%);
+    padding: 24px;
+}
+main div.nav-eps .join-mais {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-height: 50px;
+    margin-bottom: 32px;  
+}
 
+main div.nav-eps h3 {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Shippori Antique B1", sans-serif;
+}
+
+main div.nav-eps div.join-mais button {
+    border-radius: 999px;
+    color: rgb(255, 255, 255);
+    padding: 8px 16px;
+    border: 1px solid rgb(145, 143, 143) ;
+    background-color: #7dedfc00;
+    font-weight: 700;
+    min-width: 110px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 2px;
+    -webkit-box-shadow: -2px 10px 20px 0px rgba(0,0,0,0.63);
+    -moz-box-shadow: -2px 10px 20px 0px rgba(0,0,0,0.63);
+    box-shadow: -2px 10px 20px 0px rgba(0,0,0,0.63);
+    
+}
+main div.nav-eps div.join-mais button:hover {
+    border: 2px solid rgba(175, 159, 124, 0.555);
+    background-color: rgba(68, 68, 68, 0.582);
+    margin-right: 0;
+    -webkit-box-shadow: -6px 12px 21px 0px rgba(0,0,0,0.99);
+    -moz-box-shadow: -6px 12px 21px 0px rgba(0,0,0,0.99);
+    box-shadow: -6px 12px 21px 0px rgba(0,0,0,0.99);
+    
+  }
+main div.nav-eps div.join-mais button:active {
+    border: 1px solid rgb(105, 105, 105) ;
+    background-color: rgba(116, 100, 10, 0.315);
+    color: rgba(184, 184, 184, 0.815);
+    margin-right: 2px;
+    -webkit-box-shadow: -6px 8px 9px 1px rgba(0,0,0,0.8);
+    -moz-box-shadow: -6px 8px 9px 1px rgba(0,0,0,0.8);
+    box-shadow: -6px 8px 9px 1px rgba(0,0,0,0.8);
+    
 }
 
 section.episodios {
-    padding: 24px;
-}
+    padding: 12px;
+    background: rgba(18, 18, 18, 1);
 
+}
 section img{
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 8px;
 }
 
 main section div.ep {
     display: flex;
     flex-direction: row;
-    padding: 24px;
-    border-bottom: 2px solid rgb(66, 66, 66);
+    padding: 12px;
+    border-top: 1.5px solid rgb(66, 66, 66);
 }
 
 div.ep:hover {
@@ -76,19 +151,37 @@ main section div.ep div.descricoes {
 }
 main section div.ep div.descricoes h3 {
     padding-bottom: 4px;
+    font-size: 16px;
 }
 
 main section div.ep div.descricoes p {
     padding-bottom: 16px;
+    font-size: 14px;
     color: #B3B3B3;
 }
+main section div.ep div.descricoes span.resumo {
+    font-size: 14px;
+    color: #B3B3B3;
+    padding-bottom: 4px;
+}
+main section div.ep div.descricoes span.data {
+    font-size: 12px;
+    padding: 16px 0;
+    display: flex;
+}
+
+/* ICONE DO YOUTUBE */
+main section div.ep div.descricoes div.icon-text span.material-symbols-outlined {
+    font-size: 20px;
+}
+
 .icon-text {
     display: flex;
 }
 
 footer {
     grid-area: footer;
-    background-color: red;
+    background-color: rgb(44, 87, 87);
 
 }
 
