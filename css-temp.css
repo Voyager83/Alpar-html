@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    position: relative;
+}
+
+.banner-left{
+    flex: 1;
+    background: aqua;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+.banner-right{
+    flex: 1;
+    background: rgb(195, 0, 255);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
