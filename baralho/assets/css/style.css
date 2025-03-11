@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Rye&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +7,16 @@
 }
 
 body {
+    font-family: "Rye";
     min-height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-image: url('../../assets/img/joker-playing-at-poker-table-l6xh96sbhn3q7s4j.jpg');
+    background:
+    radial-gradient(circle, rgba(50, 102, 115, 0.219) 0%, rgba(26, 55, 80, 0.205) 20%, rgba(57, 38, 78, 0.308) 41%, rgba(61, 20, 50, 0.301) 64%, rgba(68, 16, 28, 0.253) 88%, rgba(37, 0, 0, 0.541) 100%),
+    url('../../assets/img/joker-playing-at-poker-table-l6xh96sbhn3q7s4j.jpg');
+    
 }
 
 .card {
@@ -31,20 +37,51 @@ body {
     height: 100%;
     backface-visibility: hidden;
     transition: transform 1s;
+    border-radius: 24px;
 }
 
 
 .front-card {
-    background-color: rgb(221, 215, 215);
+    background-color: rgba(19, 0, 0, 0.658);
+    display: grid;
+    font-size: 40px;
+    color: rgb(255, 246, 227);
+    grid-template-rows: 100px 1fr 100px;
+}
+
+.front-card img {
+    width: 100%;
 }
 
 
 .back-card {
-    background: url('../img/jokker.jpg') no-repeat center/cover;
+    background: url('../img/jokker.jpg') center/cover;
     transform: rotateY(180deg); 
+    border: 5px solid rgb(255, 255, 255);
+    opacity: 0.9;
 }
+
+
 
 
 .card:hover {
     transform: rotateY(180deg);
+}
+.naipe-cima{
+   transform: translate(3%);
+   padding: 8px;
+}
+.naipe-centro img {
+    width: 200px;
+    transform: translate(48%, 50%);
+}
+.naipe-cima img, .naipe-baixo img {
+    width: 40px;
+    display: flex;
+    filter: invert(100%);
+}
+
+.naipe-baixo{
+    transform: translate(-3%) rotate(180deg);
+    padding: 8px;
 }
