@@ -32,7 +32,7 @@ header::before {
     content: "";
     display: flex;
     height: 250px;
-    background: url('astronaut-space-4k-wallpaper-uhdpaper.com-678@0@j.jpg') center/cover;
+    background: url('../img/astronaut-space-4k-wallpaper-uhdpaper.com-678@0@j.jpg') center/cover;
 }
 
 header img {
