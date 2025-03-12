@@ -4,35 +4,49 @@
     box-sizing: border-box;
 }
 
-section{
+body {
+    display: grid;
+    grid-template-areas: "nav" "profile" "projects" "footer";
+    grid-template-rows: 30px 1fr 1fr 80px;
+    height: 100vh;
+    padding: 8px;
+}
+
+section {
     display: flex;
     width: 100%;
-    max-width: 800px;
-    height: 400px;
+    max-width: 100rem;
+    height: 700px;
     position: relative;
 }
 
 .banner-left{
-    flex: 1;
-    background: aqua;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    flex: 2;
+    background: rgb(0, 255, 225);
+
+}
+.middle{
+    position: relative;
 }
 img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    border: 5px solid white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.632);
     object-fit: cover;
 }
 .banner-right{
-    flex: 1;
-    background: rgb(195, 0, 255);
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    flex: 3;
+    background: rgb(59, 0, 78);
+}
+.about-me{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    color: aliceblue;
 }
