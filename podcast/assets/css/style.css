@@ -124,14 +124,12 @@ main div.nav-eps .join-mais {
     min-height: 50px;
     margin-bottom: 32px;  
 }
-
 main div.nav-eps h3 {
     font-size: 24px;
     font-weight: 700;
     font-family: "Shippori Antique B1", sans-serif;
     padding-bottom:24px ;
 }
-
 main div.nav-eps span {
     font-family: "Quicksand", sans-serif;
     font-size: 18px;
@@ -139,9 +137,6 @@ main div.nav-eps span {
     color: #B3B3B3;
     padding-bottom: 24px;
 }
-
-
-
 main div.nav-eps div.join-mais button {
     border-radius: 999px;
     color: rgb(255, 255, 255);
@@ -219,6 +214,9 @@ main div.nav-eps div.botoes-tag button:active {
     cursor: pointer;
     transition: 0.1s;
 }
+
+
+
 section.episodios {
     padding: 12px;
     background: rgba(18, 18, 18, 1);

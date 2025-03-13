@@ -43,15 +43,31 @@ img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.632);
     object-fit: cover;
 }
-.banner-right{
-    flex: 3;
+section .banner-right{
+    flex: 4;
     background: rgb(59, 0, 78);
 }
-.about-me{
+section .columns{
     display: flex;
-    flex-direction: column;
-    width: 400px;
+    height: calc(100vh - 62px)
+}
+
+section .columns .column-left{
+    background: rgb(0, 89, 255);
+    width: 350px;
+}
+section .columns .column-center{
+    background: rgb(72, 255, 0);
+    width: 500px;
+}
+section .columns .column-right{
+    background: rgb(255, 0, 0);
+}
+
+section .columns .column-center .about-me{
+    
     color: aliceblue;
+    padding-top: 300px;
 }
 
 footer {
