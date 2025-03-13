@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -10,6 +12,7 @@ body {
     grid-template-rows: 80px 1fr 500px 80px;
     height: 100vh;
     /* padding: 8px; */
+    font-family: 'Ubuntu';
 }
 main{
     height: 900px;
@@ -36,8 +39,8 @@ img {
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 450px;
-    height: 450px;
+    width: 500px;
+    height: 470px;
     border-radius: 50%;
     border: 3px solid white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.632);
@@ -57,7 +60,6 @@ section .columns .column-left{
     width: 350px;
 }
 section .columns .column-center{
-    background: rgb(72, 255, 0);
     width: 500px;
 }
 section .columns .column-right{
@@ -67,9 +69,39 @@ section .columns .column-right{
 section .columns .column-center .about-me{
     
     color: aliceblue;
-    padding-top: 300px;
+    padding-top: 230px;
 }
+section .columns .column-center .about-me h1 {
+    font-size: 62px;
+    font-weight: 500;
+    padding-top: 6px;
+    padding-bottom: 24px;
 
+}
+section .columns .column-center .about-me h3 {
+    font-size: 32px;
+    font-weight: 400;
+    
+}
+section .columns .column-center .about-me span {
+    font-size: 24px;
+    font-weight: 300;
+}
+section .columns .column-center .about-me .botoes{
+    padding: 24px 0;
+    display: flex;
+    gap: 24px; 
+}
+section .columns .column-center .about-me .botoes .download{
+    width: 180px;
+    height: 80px;
+    border-radius: 50px;
+}
+section .columns .column-center .about-me .botoes .contact{
+    width: 180px;
+    height: 80px;
+    border-radius: 50px;
+}
 footer {
     background: red;
 }
