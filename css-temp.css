@@ -6,17 +6,21 @@
 
 body {
     display: grid;
-    grid-template-areas: "nav" "profile" "projects" "footer";
-    grid-template-rows: 30px 1fr 1fr 80px;
+    grid-template-areas: "nav" "main" "projects" "footer";
+    grid-template-rows: 80px 1fr 500px 80px;
     height: 100vh;
-    padding: 8px;
+    /* padding: 8px; */
 }
+main{
+    height: 900px;
 
+    
+}
 section {
     display: flex;
     width: 100%;
-    max-width: 100rem;
-    height: 700px;
+    max-width: 100vw;
+    height: 100%;
     position: relative;
 }
 
@@ -31,10 +35,9 @@ section {
 img {
     position: absolute;
     top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
     border: 3px solid white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.632);
@@ -49,4 +52,8 @@ img {
     flex-direction: column;
     width: 400px;
     color: aliceblue;
+}
+
+footer {
+    background: red;
 }
