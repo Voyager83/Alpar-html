@@ -6,38 +6,43 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    
+    display: grid;
+    grid-template-areas: "nav" "banner1" "videos" "services" "footer" ;
+    grid-template-rows: 120px 800px 1400px 700px 150px;
+    height: 100vh;
+    padding: 8px;
+    background-color: rgb(136, 127, 80);
 }
 
 
 header {
+    grid-area: nav;
     background-color: #222;
     color: #fff;
-    padding: 20px;
+    padding: 16px;
     text-align: center;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
-    padding: 0;
 }
 
-nav ul li {
+header nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
-
-.banner {
+div.section-banner {
+    grid-area: banner1;
+}
+div.banner-1 {
     background-image: url('bf3-flight.jpg');
     background-size: cover;
-    height: 400px;
+    height: 100%;
     display: flex;
     align-items:center;
     justify-content: center;
@@ -45,29 +50,52 @@ nav ul li a {
     text-align: center;
 }
 
-.banner h1 {
+div.banner-1 h1 {
     font-size: 48px;
     text-shadow: 2px 4px 16px rgba(5, 5, 24, 0.8);
 
 }
 
-section {
-    display:grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    box-sizing: border-box;
+section.videos {
+    grid-area: videos;
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-.grid {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 2fr 2fr 2fr;
-    /* background-color: blue; */
-    padding: 100hv;
-    height: 350px;
-    margin: 8px;
-    width: 400px;
-    gap: 8px;
+section.videos .linha-1 {
+    width: 1400px;
+    height: 470px;
+    background: red;
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.grid * {
-    background-color: blue;
+section.videos .links-yt {
+    width: 460px;
+    height: 460px;
+    background: #4b4141;
+    
+
+}
+
+section.videos .linha-2 {
+    width: 1400px;
+    height: 470px;
+    background: rgb(255, 145, 0);
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.services {
+    grid-area: services;
+    background: #1b1147;
+    width: 100%;
+    height: 100%;
 }
