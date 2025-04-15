@@ -115,7 +115,7 @@ main div.nav-eps {
     height: calc(100% - 55vh);
     padding: 24px;
     background: rgb(50,50,50);
-    background: linear-gradient(180deg, rgba(50,50,50,1) 0%, rgba(40,40,40,1) 44%, rgba(24,24,24,1) 70%, rgba(18,18,18,1) 93%);
+    background: linear-gradient(180deg, rgba(50, 50, 50, 0.179) 0%, rgba(40, 40, 40, 0.13) 44%, rgba(24, 24, 24, 0.141) 70%, rgba(18, 18, 18, 0.108) 93%);
 }
 main div.nav-eps .join-mais {
     display: flex;
