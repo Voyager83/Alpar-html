@@ -1,68 +1,132 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title>Portfólio Nicollas</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    
-</head>
-<body>
-    
-    <header>
-        <img src="assets/img/bike edit.jpeg" height="20%" width="20%">
-        <h1 id="name">Nicollas Richard</h1>
-        <button id="translate-btn">Traduzir para Inglês</button>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfólio Nicollas - Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light text-dark">
+    <header class="container text-center py-5">
+      <img
+        src="assets/img/bike edit.jpeg"
+        alt="Perfil"
+        class="img-fluid rounded-circle mx-auto d-block mb-3 border border-white border-3"
+        style="width: 220px; height: 220px; object-fit: cover"
+      />
+      <h1 class="display-4 fw-bold">Nicollas Richard</h1>
+      <!-- <button class="btn btn-secondary mt-3">Traduzir para Inglês</button> -->
     </header>
-    
-    <nav>
-        <a href="index-temp-home.html"> HOME v2.0</a>
-        <a href="./cafeteria/index.html" id="nav1">Bar Java - Cafeteria</a>
-        <a href="./battlefield-table/index.html" id="nav2">Site Battlefield</a>  
-        <a href="./podcast/index.html" id="nav3">PodCast - DeNilo</a>
-        <a href="blog/index.html" id="nav4">Blog</a>
-        <a href="card/index.html" id="nav5">CARD</a> 
-        <a href="baralho/index.html" id="nav6">Baralho</a>
-        <a href="landing-page/index.html">Landing page - bootstrap</a>
-        <a href="https://www.linkedin.com/in/nicollas-deluca-148643110/" target="_blank" id="nav7">Meu LinkedIn</a>
+
+    <nav class="container d-flex flex-wrap justify-content-center gap-3 mb-4">
+      <a class="text-decoration-none text-primary" href="index-temp-home.html"
+        >HOME v2.0</a
+      >
+      <a class="text-decoration-none text-primary" href="./cafeteria/index.html"
+        >Bar Java - Cafeteria</a
+      >
+      <a
+        class="text-decoration-none text-primary"
+        href="./battlefield-table/index.html"
+        >Site Battlefield</a
+      >
+      <a class="text-decoration-none text-primary" href="./podcast/index.html"
+        >PodCast - DeNilo</a
+      >
+      <a class="text-decoration-none text-primary" href="blog/index.html"
+        >Blog</a
+      >
+      <a class="text-decoration-none text-primary" href="card/index.html"
+        >CARD</a
+      >
+      <a class="text-decoration-none text-primary" href="baralho/index.html"
+        >Baralho</a
+      >
+      <a
+        class="text-decoration-none text-primary"
+        href="landing-page/index.html"
+        >Landing Page - Bootstrap</a
+      >
+      <a
+        class="text-decoration-none text-primary"
+        href="https://www.linkedin.com/in/nicollas-deluca-148643110/"
+        target="_blank"
+        >Meu LinkedIn</a
+      >
     </nav>
 
-    <section>
-        <h2 id="about-title">Sobre Mim</h2>
-        <p id="about-text">
-            Sou graduando em Análise e Desenvolvimento de sistemas pela Fatec Jundiaí, Técnico em Química e Técnico em Desenvolvimento de Sistemas pela ETEC.</br>
-            Comecei a ter contato com Programação através de criação de Macros em Excel via VBA para atender algumas necessidades.</br>
-        </br>
-        Tenho participado de projetos desenvolvendo habilidades com:</p></br>
-        
-            <li id="skill1">Angular</li>
-            <li id="skill2">API Rest com Asp.Net</li>
-            <li id="skill3">SQL Server</li>
-            <li id="skill4">C#</li>
-            <li id="skill5">VB.Net</li>
-            <li id="skill6">C</li>  
-        
-        </br>
-        <p id="experience">
-            Tenho Experiência em Infraestrutura e Suporte de TI, compreendendo regras de negócio e levantamentos de requisitos. Proficiência em Excel, com foco no desenvolvimento e otimização de planilhas. Sou apaixonado por ciência e tecnologia, pratico esportes e adoro cozinhar.
-        </p>
+    <section class="container bg-white shadow-sm rounded p-4 mb-4">
+      <h2 class="fw-bold mb-3">Sobre Mim</h2>
+      <p class="lead">
+        Sou graduando em Análise e Desenvolvimento de Sistemas pela Fatec
+        Jundiaí, Técnico em Química e Técnico em Desenvolvimento de Sistemas
+        pela ETEC.
+      </p>
+      <p>
+        Comecei a ter contato com programação através da criação de Macros em
+        Excel via VBA para atender algumas necessidades.
+      </p>
+      <p class="mb-3">
+        Tenho participado de projetos desenvolvendo habilidades com:
+      </p>
+      <ul>
+        <li>Angular</li>
+        <li>API Rest com Asp.Net</li>
+        <li>SQL Server</li>
+        <li>C#</li>
+        <li>VB.Net</li>
+        <li>C</li>
+      </ul>
+      <p class="text-muted mt-3">
+        Tenho experiência em Infraestrutura e Suporte de TI, compreendendo
+        regras de negócio e levantamentos de requisitos. Proficiência em Excel,
+        com foco no desenvolvimento e otimização de planilhas. Sou apaixonado
+        por ciência e tecnologia, pratico esportes e adoro cozinhar.
+      </p>
     </section>
 
-    <section>
-        <h3 id="contact-title">Fale comigo:</h3></br>
-        <label>Seu nome:
-            <input type="text" placeholder="Digite seu nome"></br>
-        </label>
-        <label>E-Mail:
-            <input type="email" placeholder="abc@email.com"></br>
-        </label>
-        <label>Mande uma mensagem sobre o que desejar:</br>
-            <textarea name="texto" placeholder="Envie uma mensagem.."></textarea>
-        </label>
-        <button type="submit" id="send-btn">Enviar</button>
+    <section class="container bg-white shadow-sm rounded p-4 mb-4">
+      <h3 class="fw-bold mb-3">Fale comigo:</h3>
+      <form>
+        <div class="mb-3">
+          <label for="nome" class="form-label">Seu nome:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nome"
+            placeholder="Digite seu nome"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="abc@email.com"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="mensagem" class="form-label"
+            >Mande uma mensagem sobre o que desejar:</label
+          >
+          <textarea
+            class="form-control"
+            id="mensagem"
+            rows="4"
+            placeholder="Envie uma mensagem..."
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
     </section>
-    
-    <footer>
-        <p id="footer-text">&copy; 2025 Nicollas...</p>
+
+    <footer class="text-center text-muted py-3">
+      <p>&copy; 2025 Nicollas...</p>
     </footer>
-    <!-- <script defer src="assets/js/script.js"></script> -->
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
