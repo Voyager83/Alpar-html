@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f5f2;
+  }
+  .hero {
+    background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') center/cover no-repeat;
+    height: 80vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-shadow: 2px 2px 8px #000;
+  }
+  .hero h1 {
+    font-size: 4rem;
+  }
+  .section-title {
+    font-weight: bold;
+    border-bottom: 3px solid #b48c6e;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+  }
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
