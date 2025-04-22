@@ -112,10 +112,10 @@ main {
     grid-area: main;  
 }
 main div.nav-eps {
-    height: calc(100% - 55vh);
+    /* height: calc(100% - 55vh); */
     padding: 24px;
     background: rgb(50,50,50);
-    background: linear-gradient(180deg, rgba(50, 50, 50, 0.179) 0%, rgba(40, 40, 40, 0.13) 44%, rgba(24, 24, 24, 0.141) 70%, rgba(18, 18, 18, 0.108) 93%);
+    background: linear-gradient(180deg, rgb(50, 50, 50) 0%, rgb(40, 40, 40) 44%, rgb(24, 24, 24) 70%, rgb(18, 18, 18) 93%);
 }
 main div.nav-eps .join-mais {
     display: flex;

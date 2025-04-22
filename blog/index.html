@@ -2,70 +2,148 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>POO com TypeScript - Coffstack</title>
-    <link href="assets/css/styles.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
+
   <body>
-    <h1>Programação Orientada a Objetos em TypeScript</h1>
-    <p><em>Publicado em 11 de março de 2025</em></p>
+    <nav class="navbar navbar-expand-lg mb-4">
+      <div class="container">
+        <a class="navbar-brand" href="#">Coffstack</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#intro">Introdução</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#mecanismos">Mecanismos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#objeto">Objeto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#classes">Classes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#instancia">Instância</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    <p>
-      Este artigo explora os mecanismos da linguagem TypeScript que permitem a
-      implementação da Programação Orientada a Objetos (POO), abordando os
-      quatro pilares fundamentais: Herança, Polimorfismo, Encapsulamento e
-      Abstração.
-    </p>
+    <main class="container p-4 rounded">
+      <section id="intro">
+        <h1 class="mb-3">Programação Orientada a Objetos em TypeScript</h1>
+        <p ><em>Publicado em 11 de março de 2025</em></p>
+        <p>
+          Este artigo explora os mecanismos da linguagem TypeScript que permitem
+          a implementação da Programação Orientada a Objetos (POO), abordando os
+          quatro pilares fundamentais: Herança, Polimorfismo, Encapsulamento e
+          Abstração.
+        </p>
+      </section>
 
-    <h2>Mecanismos da Linguagem</h2>
+      <section id="mecanismos">
+        <h2 class="mt-5">Mecanismos da Linguagem</h2>
+      </section>
 
-    <h3>Objeto</h3>
-    <p>
-      Um objeto é uma estrutura que armazena dados em pares chave/valor.
-      Exemplo:
-    </p>
-    <pre><code>const pessoa = {
-  nome: "Lucas",
-  sobrenome: "Garcez",
-  idade: 28,
-  endereco: {
-    cidade: "Melbourne",
-    pais: "Austrália",
-  },
-};</code></pre>
+      <section id="objeto">
+        <h3 class="mt-4">Objeto</h3>
+        <p>
+          Em um contexto isolado, um objeto pode ser definido como um
+          <strong
+            >tipo de dado usado para armazenar uma coleção de valores</strong
+          >, que podem ser dados primitivos ou outros objetos, organizados em
+          pares chave/valor (key/value). No exemplo a seguir, o objeto
+          <code>pessoa</code> armazena diversas informações, como a chave
+          <code>nome</code>, que contém o valor “Lucas” do tipo “string” e a
+          chave <code>endereco</code> que armazena outro objeto.
+        </p>
+        
+        <pre class="p-3 rounded"><code>const pessoa = {
 
-    <h3>Classes, Atributos e Métodos</h3>
-    <p>
-      Uma classe define a estrutura e o comportamento de um objeto através de
-      atributos e métodos.
-    </p>
-    <pre><code>class Pessoa {
-  nome: string;
-  sobrenome: string;
-  idade: number;
+          nome: "Lucas",
+          sobrenome: "Garcez",
+          idade: 28,
+          endereco: {
+          cidade: "Melbourne",
+          pais: "Austrália",
+        },
+      };
+          </code>
+        </pre>
+      </section>
 
-  constructor(nome: string, sobrenome: string, idade: number) {
-    this.nome = nome;
-    this.sobrenome = sobrenome;
-    this.idade = idade;
-  }
+      <section id="classes">
+        <h3 class="mt-4">Classes, Atributos e Métodos</h3>
+        <p>
+          Uma classe define a estrutura e o comportamento de um objeto através
+          de atributos e métodos.
+        </p>
+        <pre class="p-3 rounded"><code>class Pessoa {
+            nome: string;
+            sobrenome: string;
+            idade: number;
 
-  obterNomeCompleto() {
-    return `${this.nome} ${this.sobrenome}`;
-  }
-}</code></pre>
+            constructor(nome: string, sobrenome: string, idade: number) {
+              this.nome = nome;
+              this.sobrenome = sobrenome;
+              this.idade = idade;
+            }
 
-    <h3>Instância</h3>
-    <p>Uma instância é um objeto criado a partir de uma classe.</p>
-    <pre><code>const lucas = new Pessoa("Lucas", "Garcez", 28);
+            obterNomeCompleto() {
+              return `${this.nome} ${this.sobrenome}`;
+            }
+          }
+          </code>
+        </pre>
+      </section>
+
+      <section id="instancia">
+        <h3 class="mt-4">Instância</h3>
+        <p>Uma instância é um objeto criado a partir de uma classe.</p>
+        <pre
+          class="p-3 rounded"
+        ><code>const lucas = new Pessoa("Lucas", "Garcez", 28);
 console.log(lucas.obterNomeCompleto()); // "Lucas Garcez"</code></pre>
 
-    <p>
-      Para mais detalhes e exemplos, consulte o artigo completo no
-      <a
-        href="https://blog.coffstack.com.br/posts/poo-typescript/"
-        target="_blank"
-        >Blog da Coffstack</a
-      >.
-    </p>
+        <p>
+          Para mais detalhes e exemplos, consulte o artigo completo no
+          <a
+            href="https://blog.coffstack.com.br/posts/poo-typescript/"
+            target="_blank"
+            >Blog da Coffstack</a
+          >.
+        </p>
+      </section>
+    </main>
+
+    <footer class="text-center py-4 mt-5">
+      <div class="container">
+        <small>&copy; 2025 - Nicollas</small>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
