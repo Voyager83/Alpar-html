@@ -9,7 +9,7 @@
 body {
     display: grid;
     grid-template-areas: "nav" "main" "projects" "footer";
-    grid-template-rows: 80px 1fr 500px 80px;
+    grid-template-rows: 80px 1fr 1fr 80px;
     height: 100vh;
     /* padding: 8px; */
     font-family: 'Ubuntu';
@@ -29,13 +29,13 @@ section {
 
 .banner-left{
     flex: 2;
-    background: rgb(0, 255, 225);
+    background: rgb(155, 155, 155);
 
 }
 .middle{
     position: relative;
 }
-img {
+main img {
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -48,7 +48,7 @@ img {
 }
 section .banner-right{
     flex: 4;
-    background: rgb(59, 0, 78);
+    background: rgb(20, 15, 14);
 }
 section .columns{
     display: flex;
@@ -56,15 +56,16 @@ section .columns{
 }
 
 section .columns .column-left{
-    background: rgb(0, 89, 255);
+    /* background: rgb(0, 89, 255); */
     width: 350px;
 }
 section .columns .column-center{
     width: 500px;
 }
-section .columns .column-right{
+/* section .columns .column-right{
     background: rgb(255, 0, 0);
-}
+    width: 100px;
+} */
 
 section .columns .column-center .about-me{
     
@@ -102,6 +103,34 @@ section .columns .column-center .about-me .botoes .contact{
     height: 80px;
     border-radius: 50px;
 }
+
+.projects {
+    background-color: #14100E;
+}
+  
+.card img {
+    object-fit: cover;
+    height: 200px;
+}
+  
+.card-title  {
+    color: #13e258;
+}
+.btn {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+  
+.card:hover {
+    transform: translateY(-6px);
+    transition: 0.3s ease;
+    box-shadow: 0 4px 20px rgb(254, 255, 221);
+  }
+  
 footer {
     background: red;
 }
+
+
+
+  
