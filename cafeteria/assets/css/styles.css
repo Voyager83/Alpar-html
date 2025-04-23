@@ -29,4 +29,43 @@ body {
     height: 200px;
     object-fit: cover;
   }
+
+  body {
+    background-color: #f9f6f2;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 40px 20px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #6c4c3c;
+  }
+
+  .table-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .table {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  }
+
+  thead {
+    background-color: #6c4c3c;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  tbody td {
+    background-color: #fff8f3;
+    font-weight: 500;
+  }
+
+  tbody td[rowspan] {
+    vertical-align: middle;
+    background-color: #ffe8d6;
+  }
   

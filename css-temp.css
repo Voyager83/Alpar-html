@@ -9,11 +9,20 @@
 body {
     display: grid;
     grid-template-areas: "nav" "main" "projects" "footer";
-    grid-template-rows: 80px 1fr 1fr 80px;
+    grid-template-rows: 56px 1fr 1fr 80px;
     height: 100vh;
     /* padding: 8px; */
     font-family: 'Ubuntu';
 }
+
+.navbar{ 
+    background-color: rgba(124, 146, 150, 0); 
+}
+
+/* nav{
+   
+} */
+
 main{
     height: 900px;
 
