@@ -48,7 +48,7 @@ main img {
 }
 section .banner-right{
     flex: 4;
-    background: rgb(20, 15, 14);
+    background: rgb(29, 29, 29);
 }
 section .columns{
     display: flex;
@@ -105,7 +105,7 @@ section .columns .column-center .about-me .botoes .contact{
 }
 
 .projects {
-    background-color: #14100E;
+    background-color: #272727;
 }
   
 .card img {
