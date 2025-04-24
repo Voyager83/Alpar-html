@@ -39,7 +39,7 @@ section {
 .banner-left{
     flex: 2;
     background: rgb(155, 155, 155);
-    background: url('assets/img/building.jpg')center/contain;
+    background: url('../img/building.jpg')center/contain;
 }
 .middle{
     position: relative;
