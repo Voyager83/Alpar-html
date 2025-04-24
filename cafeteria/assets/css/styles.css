@@ -6,6 +6,7 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f8f5f2;
+
   }
   .hero {
     background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') center/cover no-repeat;
@@ -30,11 +31,6 @@ body {
     object-fit: cover;
   }
 
-  body {
-    background-color: #f9f6f2;
-    font-family: 'Segoe UI', sans-serif;
-    padding: 40px 20px;
-  }
 
   h2 {
     text-align: center;
