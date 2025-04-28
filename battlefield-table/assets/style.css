@@ -61,7 +61,7 @@ div.banner-1 h1 {
 
 section.videos {
     grid-area: videos;
-    background-color: blue;
+    background-color: rgb(138, 130, 115);
     width: 100%;
     height: 100%;
     display: flex;
