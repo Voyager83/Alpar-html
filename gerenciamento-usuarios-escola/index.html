@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="appEscola">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerenciamento de Usuários - Escola</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+  </style>
+</head>
+<body ng-controller="AppController">
+
+  <h1 ng-bind="mensagem"></h1>
+
+  <p><strong>Nome:</strong> {{ usuario.nome }}</p>
+  <p><strong>Tipo:</strong> {{ usuario.tipo }}</p>
+
+
+  <div ng-if="usuario.tipo === 'Aluno'">
+    <img src="#" alt="Aluno">
+  </div>
+  
+  <div ng-if="usuario.tipo === 'Professor'">
+    <img src="#" alt="Professor">
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
