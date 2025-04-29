@@ -1,28 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR" ng-app="appEscola">
-<head>
-  <meta charset="UTF-8">
-  <title>Gerenciamento de Usuários - Escola</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gerenciamento Escola</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
 
-  </style>
-</head>
-<body ng-controller="AppController">
+  <body ng-controller="AppController">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Alpar academy</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="../index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >Usuários <span class="badge bg-danger">5</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1 ng-bind="mensagem"></h1>
 
-  <h1 ng-bind="mensagem"></h1>
+    <div ng-controller="ListaUsuariosController">
+      <input type="text" placeholder="Buscar por nome..." ng-model="filtro" />
+      <select ng-model="filtroTipo">
+        <option value="">Todos</option>
+        <option value="Aluno">Aluno</option>
+        <option value="Professor">Professor</option>
+      </select>
 
-  <p><strong>Nome:</strong> {{ usuario.nome }}</p>
-  <p><strong>Tipo:</strong> {{ usuario.tipo }}</p>
+      <p>Total de Alunos: {{ (usuarios | filter:{tipo:'Aluno'}).length }}</p>
+      <p>
+        Total de Professores: {{ (usuarios | filter:{tipo:'Professor'}).length
+        }}
+      </p>
 
+      <div
+        class="usuario"
+        ng-repeat="u in usuarios | filter:filtro | filter:{tipo: filtroTipo}"
+      >
+        <p><strong>Nome:</strong> {{ u.nome | uppercase }}</p>
+        <p><strong>Tipo:</strong> {{ u.tipo }}</p>
+        <p>
+          <strong>Data de Cadastro:</strong> {{ u.dataCadastro |
+          date:'dd/MM/yyyy' }}
+        </p>
+      </div>
+    </div>
 
-  <div ng-if="usuario.tipo === 'Aluno'">
-    <img src="#" alt="Aluno">
-  </div>
-  
-  <div ng-if="usuario.tipo === 'Professor'">
-    <img src="#" alt="Professor">
-  </div>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
-  <script src="app.js"></script>
-</body>
+  </body>
 </html>
