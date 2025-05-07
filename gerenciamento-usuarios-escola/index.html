@@ -8,7 +8,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-      crossorigin="anonymous"/>
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
 
@@ -30,45 +31,95 @@
               <a class="nav-link active" href="../index.html">Início</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"
-                >Usuários <span class="badge bg-danger">5</span></a
-              >
+              <a class="nav-link" href="#">
+                Usuários <span class="badge bg-danger">{{ usuarios.length }}</span>
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <h1 ng-bind="mensagem"></h1>
 
-    <div ng-controller="ListaUsuariosController">
-      <input type="text" placeholder="Buscar por nome..." ng-model="filtro" />
-      <select ng-model="filtroTipo">
-        <option value="">Todos</option>
-        <option value="Aluno">Aluno</option>
-        <option value="Professor">Professor</option>
-      </select>
+    <div class="container mt-4">
+      <h1 class="mb-4" ng-bind="mensagem"></h1>
 
-      <p>Total de Alunos: {{ (usuarios | filter:{tipo:'Aluno'}).length }}</p>
-      <p>
-        Total de Professores: {{ (usuarios | filter:{tipo:'Professor'}).length
-        }}
-      </p>
+      <!-- Formulário para adicionar usuário -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Adicionar novo usuário</h5>
+          <div class="row g-3">
+            <div class="col-md-5">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nome"
+                ng-model="novoUsuario.nome"
+              />
+            </div>
+            <div class="col-md-4">
+              <select class="form-select" ng-model="novoUsuario.tipo">
+                <option value="" disabled selected>Selecione o tipo</option>
+                <option value="Aluno">Aluno</option>
+                <option value="Professor">Professor</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn-primary w-100" ng-click="adicionarUsuario()">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <div
-        class="usuario"
-        ng-repeat="u in usuarios | filter:filtro | filter:{tipo: filtroTipo}"
-      >
-        <p><strong>Nome:</strong> {{ u.nome | uppercase }}</p>
-        <p><strong>Tipo:</strong> {{ u.tipo }}</p>
-        <p>
-          <strong>Data de Cadastro:</strong> {{ u.dataCadastro |
-          date:'dd/MM/yyyy' }}
-        </p>
+      <!-- Filtros -->
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Buscar por nome..."
+            ng-model="filtro"
+          />
+        </div>
+        <div class="col-md-6">
+          <select class="form-select" ng-model="filtroTipo">
+            <option value="">Todos</option>
+            <option value="Aluno">Aluno</option>
+            <option value="Professor">Professor</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Totais -->
+      <div class="mb-3">
+        <p>Total de Alunos: <strong>{{ (usuarios | filter:{tipo:'Aluno'}).length }}</strong></p>
+        <p>Total de Professores: <strong>{{ (usuarios | filter:{tipo:'Professor'}).length }}</strong></p>
+      </div>
+
+      <!-- Lista de usuários -->
+      <div ng-controller="ListaUsuariosController" class="row">
+        <div
+          class="col-md-6"
+          ng-repeat="u in usuarios | filter:filtro | filter:{tipo: filtroTipo} track by $index"
+        >
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">{{ u.nome | uppercase }}</h5>
+              <p class="card-text">Tipo: {{ u.tipo }}</p>
+              <p class="card-text">
+                Data de Cadastro: {{ u.dataCadastro | date:'dd/MM/yyyy' }}
+              </p>
+              <button class="btn btn-danger btn-sm" ng-click="removerUsuario($index)">Remover</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
