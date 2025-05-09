@@ -1,11 +1,11 @@
 angular.module('appEscola', [])
   .service('UsuarioService', function () {
     const usuarios = [
-      { nome: "João", tipo: "Aluno", dataCadastro: new Date("2024-01-10") },
-      { nome: "Maria", tipo: "Professor", dataCadastro: new Date("2023-11-05") },
-      { nome: "Carlos", tipo: "Aluno", dataCadastro: new Date("2024-03-18") },
+      { nome: "João", tipo: "Aluno", dataCadastro: new Date("2003-01-10") },
+      { nome: "Maria", tipo: "Professor", dataCadastro: new Date("2099-11-05") },
+      { nome: "Carl Jhonson", tipo: "Aluno", dataCadastro: new Date("1999-03-18") },
       { nome: "Fernanda", tipo: "Professor", dataCadastro: new Date("2022-09-22") },
-      { nome: "Lucas", tipo: "Aluno", dataCadastro: new Date("2024-04-12") }
+      { nome: "Peter", tipo: "Aluno", dataCadastro: new Date("2023-04-12") }
     ];
 
     this.listar = function () {

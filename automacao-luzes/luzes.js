@@ -1,6 +1,5 @@
 // CODIGO DE TESTES TEMPORARIO, INCOMPLETO
 
-
 class CentralDeLuzes {
     constructor() {
       if (CentralDeLuzes._instancia) {
@@ -40,7 +39,7 @@ class CentralDeLuzes {
     }
   }
   
-  // Eventos
+  
   document.addEventListener("DOMContentLoaded", function () {
     const botoes = document.querySelectorAll("button[data-comodo]");
     const central = CentralDeLuzes.getInstance();

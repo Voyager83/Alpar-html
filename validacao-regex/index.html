@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Validação Regex</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <h2>Validação de Formulário</h2>
+  <form id="form">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+    <div id="nome-feedback" class="feedback"></div>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required>
+    <div id="email-feedback" class="feedback"></div>
+
+    <label for="cpf">CPF:</label>
+    <input type="text" id="cpf" name="cpf" required>
+    <div id="cpf-feedback" class="feedback"></div>
+
+    <button type="submit">Validar</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('form');
+    const inputs = {
+      nome: document.getElementById('nome'),
+      email: document.getElementById('email'),
+      cpf: document.getElementById('cpf'),
+    };
+    const feedbacks = {
+      nome: document.getElementById('nome-feedback'),
+      email: document.getElementById('email-feedback'),
+      cpf: document.getElementById('cpf-feedback'),
+    };
+
+    const regex = {
+      nome: /^[A-Za-zÀ-ÿ\s]+$/,
+      email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      cpf: /^\d{3}\.\d{3}\.\d{3}-\d{2}$/,
+    };
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); // evita o refresh
+
+      let valido = true;
+
+      for (const campo in inputs) {
+        const valor = inputs[campo].value.trim();
+        const ehValido = regex[campo].test(valor);
+
+        if (ehValido) {
+          inputs[campo].classList.remove('invalid');
+          inputs[campo].classList.add('valid');
+          feedbacks[campo].textContent = 'Válido ✅';
+          feedbacks[campo].className = 'feedback valid';
+        } else {
+          inputs[campo].classList.remove('valid');
+          inputs[campo].classList.add('invalid');
+          feedbacks[campo].textContent = 'Inválido ❌';
+          feedbacks[campo].className = 'feedback invalid';
+          valido = false;
+        }
+      }
+
+      if (valido) {
+        alert("Todos os campos estão válidos!");
+      }
+    });
+  </script>
+</body>
+</html>

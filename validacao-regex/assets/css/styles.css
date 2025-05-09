@@ -1,0 +1,44 @@
+body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h2 {
+      padding-left: 400px;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+    .valid {
+      border-color: green;
+    }
+    .invalid {
+      border-color: red;
+    }
+    .feedback {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .feedback.valid {
+      color: green;
+    }
+    .feedback.invalid {
+      color: red;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 15px;
+    }
+  

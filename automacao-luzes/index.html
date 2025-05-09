@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Automação de Luzes</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>CEntral elétrica</h1>
+
+    <div class="comodos-container">
+      <div id="quarto" class="comodo">Quarto</div>
+      <div id="sala" class="comodo">Sala</div>
+      <div id="cozinha" class="comodo">Cozinha</div>
+      <div id="garagem" class="comodo">Garagem</div>
+    </div>
+
+    <div class="botoes">
+      <!-- Quarto -->
+      <button data-comodo="quarto" data-acao="ligar" title="Ligar Quarto">
+        <i class="fa fa-lightbulb"></i>
+      </button>
+      <button data-comodo="quarto" data-acao="desligar" title="Desligar Quarto">
+        <i class="fa fa-power-off"></i>
+      </button>
+
+      <!-- Sala -->
+      <button data-comodo="sala" data-acao="ligar" title="Ligar Sala">
+        <i class="fa fa-lightbulb"></i>
+      </button>
+      <button data-comodo="sala" data-acao="desligar" title="Desligar Sala">
+        <i class="fa fa-power-off"></i>
+      </button>
+
+      <!-- Cozinha -->
+      <button data-comodo="cozinha" data-acao="ligar" title="Ligar Cozinha">
+        <i class="fa fa-lightbulb"></i>
+      </button>
+      <button
+        data-comodo="cozinha"
+        data-acao="desligar"
+        title="Desligar Cozinha"
+      >
+        <i class="fa fa-power-off"></i>
+      </button>
+
+      <!-- Garagem -->
+      <button data-comodo="garagem" data-acao="ligar" title="Ligar Garagem">
+        <i class="fa fa-lightbulb"></i>
+      </button>
+      <button
+        data-comodo="garagem"
+        data-acao="desligar"
+        title="Desligar Garagem"
+      >
+        <i class="fa fa-power-off"></i>
+      </button>
+    </div>
+
+    <p id="status"></p>
+
+    
+    <a class="icon-link" href="../index.html">
+      <i class="bi bi-arrow-left-circle"></i> HOME
+    </a>
+
+    <script src="luzes.js"></script>
+  </body>
+</html>

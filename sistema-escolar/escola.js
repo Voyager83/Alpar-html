@@ -1,3 +1,4 @@
+
 class Usuario {
     constructor(nome, email, senha) {
         this.nome = nome;
@@ -6,7 +7,12 @@ class Usuario {
     }
 
     exibirPerfil() {
-        return `Nome: ${this.nome}<br>Email: ${this.email}`;
+        return `
+            <div class="card shadow p-4">
+                <h2>${this.nome}</h2>
+                <p><strong>Email:</strong> ${this.email}</p>
+            </div>
+        `;
     }
 }
 
@@ -18,7 +24,13 @@ class Aluno extends Usuario {
     }
 
     exibirPerfil() {
-        return `${super.exibirPerfil()}<br>Turma: ${this.turma}`;
+        return `
+            <div class="card shadow p-4">
+                <h2>${this.nome} (Aluno)</h2>
+                <p><strong>Email:</strong> ${this.email}</p>
+                <p><strong>Turma:</strong> ${this.turma}</p>
+            </div>
+        `;
     }
 }
 
@@ -30,8 +42,12 @@ class Professor extends Usuario {
     }
 
     exibirPerfil() {
-        return `${super.exibirPerfil()}<br>Matérias: ${this.materias.join(", ")}`;
+        return `
+            <div class="card shadow p-4">
+                <h2>${this.nome} (Professor)</h2>
+                <p><strong>Email:</strong> ${this.email}</p>
+                <p><strong>Matérias:</strong> ${this.materias.join(', ')}</p>
+            </div>
+        `;
     }
 }
-
-
