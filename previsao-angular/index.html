@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="weatherApp">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Previsão do Tempo</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+  <body ng-controller="WeatherController as weather">
+    <main>
+      <section class="weather-card" ng-class="{'active': weather.cardActive}">
+        <h1>{{weather.cityName}}</h1>
+        <div class="weather-icon">
+          <img
+            ng-src="{{weather.iconUrl}}"
+            alt="Ícone do clima"
+            ng-if="weather.iconUrl"
+          />
+        </div>
+
+        <div class="temperature">
+          <h2>{{weather.temperature}}°C</h2>
+          <p class="feels-like">Sensação: {{weather.feelsLike}}°C</p>
+        </div>
+
+        <div class="min-max">
+          <span class="min">{{weather.minTemperature}}°C</span>
+          <span class="divider">/</span>
+          <span class="max">{{weather.maxTemperature}}°C</span>
+        </div>
+
+        <div class="details">
+          <div class="detail-item">
+            <span class="label">Humidade</span>
+            <span class="value">{{weather.humidity}}%</span>
+          </div>
+
+          <div class="detail-item wind">
+            <span class="label">Vento</span>
+            <div class="wind-direction">
+              <img
+                ng-src="#"
+                ng-style="{'transform': 'rotate(' + weather.windOrientation + 'deg)'}"
+                alt="Direção do vento"
+              />
+              <span class="value">{{weather.windVelocity}} m/s</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="search-box">
+        <input
+          type="text"
+          ng-model="weather.city"
+          placeholder="Digite uma cidade"
+          ng-keyup="$event.keyCode === 13 && weather.getWeather()"
+        />
+        <button ng-click="weather.getWeather()">
+          <img src="#" alt="Buscar" />
+        </button>
+      </section>
+
+      <div class="message" ng-show="weather.loading || weather.error">
+        <p ng-show="weather.loading">Carregando...</p>
+        <p class="error" ng-show="weather.error">{{weather.errorMessage}}</p>
+      </div>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/previsaoController.js"></script>
+  </body>
+</html>
