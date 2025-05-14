@@ -16,7 +16,8 @@
 }
 
 body {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-image: url('../img/Wallpaper_chuva.jpeg');
+    /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -36,7 +37,7 @@ main {
 
 
 .weather-card {
-    background: var(--card-bg);
+    background: rgba(189, 224, 254, 0.153);
     border-radius: 16px;
     padding: 24px;
     box-shadow: var(--shadow);
@@ -56,6 +57,7 @@ main {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 8px;
+    color: white;
 }
 
 .weather-icon img {
@@ -68,11 +70,12 @@ main {
     font-size: 48px;
     font-weight: 300;
     line-height: 1;
+    color: white;
 }
 
 .feels-like {
     font-size: 14px;
-    color: #666;
+    color: #9c9c9c;
 }
 
 .min-max {
@@ -104,11 +107,13 @@ main {
 
 .label {
     font-size: 12px;
-    color: #666;
+    color: #e7e7e7;
 }
 
 .value {
     font-weight: 500;
+    color: #c4c4c4;
+
 }
 
 .wind-direction {
